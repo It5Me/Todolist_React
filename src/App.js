@@ -9,12 +9,12 @@ class App extends Component {
       {
         id: 1,
         title: "one",
-        complete: false
+        complete: true  
       },
       {
         id: 2,
         title: "two",
-        complete: false
+        complete: true
       },
       {
         id: 3,
