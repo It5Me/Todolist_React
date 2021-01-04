@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 class Todoitem extends Component{
     constructor(props){
         super(props)
-        
+
     }
     getStyle =() =>{ 
         return{
@@ -19,28 +19,19 @@ class Todoitem extends Component{
         return(
             <div style={this.getStyle()}>
                 <p>
-                <input type="checkbox" onChange={this.props.markComplete.bind(this,id,title,complete)} checked={complete}/> {' '}
-                {title}
-                {' '}
-                <button onClick= {this.props.delTodo.bind(this,id)} style={btnStyle}>x</button>
+                <div className="checkbox">
+                <input type="checkbox" onChange={this.props.markComplete.bind(this,id,title,complete)} checked={complete}/> {' '} </div>
+                <div className="inputNewTodo">{title}</div>
+                {' '}   
+                <button  className="delStyle btnStyle-icon" onClick= {this.props.delTodo.bind(this,id)} >
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
                 </p>
             </div>
             
         )
     }
 }
-const btnStyle = {
-    background: '#ff6666',
-    color: '#fff',
-    padding: '5px 9px',
-    borderRadius: '50%',
-    cursor: 'pointer',
-    float: 'right',
-    
-    
-}
-Todoitem.propTypes = {
-    todo:propTypes.object.isRequired
-}
+
 
 export default Todoitem;

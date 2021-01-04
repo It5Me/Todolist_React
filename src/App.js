@@ -127,11 +127,13 @@ class App extends Component {
   }
   render() {
     return (
+      
       <div className="App">
           <Header/>
           <AddTodo addTodo={this.addTodo} ></AddTodo>
           <Todos todos={this.state.todos} markComplete= {this.markComplete} delTodo={this.delTodo}></Todos>
       </div>
+      
     );
   }
 }

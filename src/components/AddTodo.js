@@ -28,19 +28,19 @@ export class AddTodo extends Component {
                 <form >
                     <div className="addTodoContainer">
                         <div className ="headerContainer">
-                            <div className= "btnNewTodo" onClick={handleclick} >
-                                <i className="fa fa-plus-square custom-icon" aria-hidden="true"></i>
-                                New
-                            </div>
                                 {/* <input className = "btnNewTodo" type="submit" ></input> */}
-                                <input className = "boxAddTodo" type="text" placeholder="Add Todo..."
+                                <i class="fa fa-pencil custom-icon-pencil" aria-hidden="true"></i>
+                                <input className = "boxAddTodo" type="text" placeholder="New Todo..."
                                 autoComplete="off"
                                 name="title" 
                                 value={this.state.title} 
                                 onChange={onChange} >
                                 </input>
-        
-                            </div> 
+                                <div className= "btnNewTodo" onClick={handleclick} >
+                                    <i className="fa fa-plus-square custom-icon" aria-hidden="true"></i>
+                                    Add 
+                                </div>
+                        </div> 
                     </div>  
                 </form>
             </div>
