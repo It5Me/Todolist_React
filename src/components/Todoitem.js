@@ -2,18 +2,11 @@ import React, { Component } from 'react';
 import propTypes from "prop-types";
 
 class Todoitem extends Component{
-    getStyle =() =>{
-    // if(this.props.todo.complete){
-    //         return{
-    //             textDecoration: 'line-through',
-                
-                
-    //         }
-    // }else{
-    //         return{
-    //             textDecoration: 'none'
-    //         }
-    //     }
+    constructor(props){
+        super(props)
+        
+    }
+    getStyle =() =>{ 
         return{
             padding: '5px',
             background: '#f4f4f4',
@@ -26,7 +19,7 @@ class Todoitem extends Component{
         return(
             <div style={this.getStyle()}>
                 <p>
-                <input type="checkbox" onChange={this.props.markComplete.bind(this,id,title,complete)}/> {' '}
+                <input type="checkbox" onChange={this.props.markComplete.bind(this,id,title,complete)} checked={complete}/> {' '}
                 {title}
                 {' '}
                 <button onClick= {this.props.delTodo.bind(this,id)} style={btnStyle}>x</button>
