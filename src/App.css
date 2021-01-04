@@ -1,38 +1,66 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btnNewTodo{
+  background: rgb(209, 180, 180);
+  width: 80px;
+  height: 40px;
+  border: 2px  ;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding: 4px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-items: center;
+  font-size: 16px;
+  cursor: pointer;
+
+  /* padding-left: 10px; */
+}
+.headerContainer{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  justify-items: center;
+  /* background-color: rgb(255, 0, 64); */
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.addTodoContainer{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  /* background-color: aqua; */
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnNewTodo:hover{
+  background: rgb(190, 140, 140);
+}
+.btnNewTodo:active{
+  background: rgb(199, 115, 115);
+}
+.custom-icon{
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.boxAddTodo:focus{
+    outline: none;
+    /* border: 3px solid rgb(196, 128, 169); */
+    border-radius: 2px;
+    padding: 12px;
+    /* color: red; */
+    border : none;
+    border-bottom: 2px solid blue;
+}
+.boxAddTodo{
+  border: none;
+  outline: none;
+  padding: 12px;
+  /* border-radius: 12px;*/
+  border-bottom: 2px solid blue;
+  margin-left: 10px;
 }

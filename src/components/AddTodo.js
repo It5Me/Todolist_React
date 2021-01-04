@@ -4,22 +4,27 @@ import React, { Component } from 'react'
 
 export class AddTodo extends Component {
     render() {
+        const handleclick=()=>{
+            console.log("hello world")
+        }
         return (
             <div>
                 <form>
-                    <input type="text"  style={AddTodoStyle} placeholder="Add Todo..." ></input>
+                    <div className="addTodoContainer">
+                        <div className ="headerContainer">
+                            <div className= "btnNewTodo" onClick={handleclick}>
+                                <i className="fa fa-plus-square custom-icon" aria-hidden="true"></i>
+                                New
+                            </div>
+                                {/* <input className = "btnNewTodo" type="submit" ></input> */}
+                                <input className = "boxAddTodo" type="text"   placeholder="Add Todo..." ></input>
+                            </div> 
+                    </div>  
                 </form>
             </div>
         )
     }
 }
-const AddTodoStyle ={
-    border: 'none',
-    backgroundColor: '#fff',
-    color: 'blue',
-    padding: '10px',
-    borderradius: '10px',
-    margin: '10px'
-}
+
 
 export default AddTodo
