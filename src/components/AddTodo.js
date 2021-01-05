@@ -36,8 +36,8 @@ export class AddTodo extends Component {
                                 value={this.state.title} 
                                 onChange={onChange} >
                                 </input>
-                                <div className= "btnNewTodo" onClick={handleclick} >
-                                    <i className="fa fa-plus-square custom-icon" aria-hidden="true"></i>
+                                <div className= "btnNewTodo disabletextsection" onClick={handleclick} >
+                                    <i className="fa fa-plus-square custom-icon " aria-hidden="true"></i>
                                     Add 
                                 </div>
                         </div> 
